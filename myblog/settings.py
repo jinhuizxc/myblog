@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [ ]
 
 
 # Application definition
-
+# Django自带应用
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',  # 这里逗号一定要加上，不然会报错！
+    'blog2'
 ]
 # django 工具集
 MIDDLEWARE = [
@@ -51,7 +52,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'myblog.urls'
-# 模板配置
+# 模板配置- 模板引擎
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
